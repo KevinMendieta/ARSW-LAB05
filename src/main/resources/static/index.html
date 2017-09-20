@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Blueprints</title>
+		<style>
+			table {
+	    		font-family: consolas, sans-serif;
+	    		border-collapse: collapse;
+	    		width: 50%;
+			}
+
+			td, th {
+	    		border: 1px solid #dddddd;
+	    		text-align: left;
+	    		padding: 8px;
+			}
+
+			tr:nth-child(even) {
+	    		background-color: #dddddd;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="/webjars/jquery/jquery.min.js"></script>
+    	<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<script src="js/apimock.js"></script>
+		<script src="js/app.js"></script>
+    	<link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	</head>
+
+	<body>
+		<h1>Find Blueprints</h1>
+		<form id="getBlueprintsForm">
+			Authors's name:<br>
+			<input type="text" name="authorName"><br>
+			<br>
+			<input type="submit" value="GetBlueprints">
+		</form>
+		<br>
+		<form id="showBlueprintsForm">
+			<table>
+				<tr>
+	    			<th>Blueprint Name</th>
+	    			<th>Points</th>
+	  			</tr>
+	  			<tr>
+	    			<td></td>
+	    			<td></td>
+	  			</tr>
+  			</table>
+		</form>
+		<form id="showBlueprintsPoints">
+			<h3>Total points:</h3>
+		</form>
+	</body>
+
+</html>
