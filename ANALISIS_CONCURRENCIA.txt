@@ -1,0 +1,12 @@
+Qué condiciones de carrera se podrían presentar?
+    Cuando se intente acceder al Map de forma concurrente.
+        Solucion: Usar un Map concurrente.
+    Si se producen dos inserciones de exactamente la misma blueprint.
+        Solucion: Sincronizar la insercion de blueprints (a nivel
+        de persistencia).
+    Si se modifica la misma blue print al mismo tiempo.
+        Solucion: Sincronizar el metodo de la modificacion de blueprints (a nivel
+        de persistencia).
+Cuales son las respectivas regiones críticas?
+    Las regiones criticas se encuentran a nivel de la persistencia de la aplicacion
+    prescisamente en los metodos de actualizar e insertar blueprints, asi como la instanciacion del map no concurrente.

@@ -1,0 +1,9 @@
+curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/blueprints -d '{"author":"jack","points":[{"x":140,"y":140},{"x":115,"y":115},{"x":115,"y":115}],"name":"SAS"}'
+
+curl -i -X PUT -HContent-Type:application/json -HAccept:application/json http://localhost:8080/blueprints/max/bnp -d '[{"x":140,"y":140},{"x":115,"y":115},{"x":115,"y":115}]'
+
+curl -i -X PUT -HContent-Type:application/json -HAccept:application/json http://localhost:8080/blueprints/juan/ARS -d '[{"x":687,"y":24},{"x":78,"y":44}]'
+
+curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/blueprints -d '{"author":"juan","points":[{"x":140,"y":140},{"x":115,"y":115},{"x":115,"y":115},{"x":687,"y":24},{"x":78,"y":44}],"name":"ARS"}'
+
+
