@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>Blueprints</title>
 		<style>
@@ -33,26 +32,28 @@
 		<h1>Find Blueprints</h1>
 		<form id="getBlueprintsForm">
 			Authors's name:<br>
-			<input type="text" name="authorName"><br>
+			<input type="text" id="authorName" placeholder="Author Name"><br>
 			<br>
-			<input type="submit" value="GetBlueprints">
+			<input type="button" value="GetBlueprints" onclick="Module.updateAuthorName(document.getElementById('authorName').value); Module.getBlueprintsByAuthorName(document.getElementById('authorName').value);">
 		</form>
 		<br>
 		<form id="showBlueprintsForm">
-			<table>
-				<tr>
-	    			<th>Blueprint Name</th>
-	    			<th>Points</th>
-	  			</tr>
-	  			<tr>
-	    			<td></td>
-	    			<td></td>
-	  			</tr>
+			<h3 id="authorNameShow"></h3>
+			<table id="myTable">
+				<thead>
+					<tr>
+	    				<th>Blueprint Name</th>
+	    				<th>Points</th>
+	  				</tr>
+				</thead>
+				<tbody>
+				</tbody>
   			</table>
+  			<h3>Total points:</h3><h3 id="totalPoints"></h3>
 		</form>
-		<form id="showBlueprintsPoints">
-			<h3>Total points:</h3>
+		<form id="showCanvas">
+			<h3 id="currentBlueprintName"></h3>
+			<canvas id="myCanvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
 		</form>
 	</body>
-
 </html>
