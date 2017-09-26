@@ -1,12 +1,11 @@
 //@author KevinMendieta
 
 var Module = (function() {
+    var api = apiclient;
 	var authorName;
     var blueprints;
-    var str = function(tag){return '"' + tag + '"';};
-    var cleanRows = function(){
-        $('#myTable tbody').find("tr").remove();;
-    };
+    var str = function(tag){ return '"' + tag + '"';};
+    var cleanRows = function(){ $('#myTable tbody').find("tr").remove();};
     var mapBlueprints = function(bprints){
         cleanRows();
         document.getElementById("authorNameShow").innerHTML = authorName + " Blueprints:";
@@ -43,10 +42,10 @@ var Module = (function() {
             authorName = newAuthorName;
         },
         getBlueprintsByAuthorName: function(newAuthorName){
-            apimock.getBlueprintsByAuthor(newAuthorName, mapBlueprints);
+            api.getBlueprintsByAuthor(newAuthorName, mapBlueprints);
         },
         getBlueprintsByAuthorNameAndBlueprintName: function(newAuthorName, newBlueprintName){
-            apimock.getBlueprintsByNameAndAuthor(newAuthorName, newBlueprintName, drawBlueprint);
+            api.getBlueprintsByNameAndAuthor(newAuthorName, newBlueprintName, drawBlueprint);
         }
     };
 })();

@@ -38,9 +38,15 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
         blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
         bp=new Blueprint("juan", "ARS",pts);
         blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
-        bp=new Blueprint("carl", "SOS",pts);
+        pts=new Point[]{new Point(50, 50), new Point(50, 100), new Point(100, 100), new Point(100, 50), new Point(50, 50)};
+        bp=new Blueprint("max", "Square",pts);
         blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
-        
+        pts=new Point[]{new Point(100, 100), new Point(50, 150), new Point(150, 150), new Point(100, 100)};
+        bp=new Blueprint("max", "Triangle",pts);
+        blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
+        pts=new Point[]{new Point(340, 240), new Point(15, 215), new Point(50, 150), new Point(340, 240)};
+        bp=new Blueprint("max", "LUL",pts);
+        blueprints.put(new Tuple<>(bp.getAuthor(),bp.getName()), bp);
     }    
     
     @Override
