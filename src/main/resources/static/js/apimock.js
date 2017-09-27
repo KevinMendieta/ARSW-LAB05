@@ -39,7 +39,7 @@ apiclient = (function(){
 		getBlueprintsByNameAndAuthor:function(authname,bpname,callback){
 			$.get("/blueprints/" + authname + "/" + bpname, callback);
 		}
-	}
+	};
 })();
 
 /*

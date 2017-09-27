@@ -13,15 +13,15 @@ var Module = (function() {
             return {blueprintName: blueprint.name, totalPoints:blueprint.points.length};
         });
         blueprints.map(function(blueprint){
-            let content = "<tr><td>" + blueprint.blueprintName +"</td><td>" + blueprint.totalPoints + "</td><td><input type='button' value='draw' onclick='Module.getBlueprintsByAuthorNameAndBlueprintName(" + str(authorName) +"," + str(blueprint.blueprintName) + ")'></td></tr>";
+            let content = "<tr><td>" + blueprint.blueprintName +"</td><td>" + blueprint.totalPoints + "</td><td><input type='button' class='button' value='draw' onclick='Module.getBlueprintsByAuthorNameAndBlueprintName(" + str(authorName) +"," + str(blueprint.blueprintName) + ")'></td></tr>";
             $('#myTable tbody').append(content);
         });
-        document.getElementById("totalPoints").innerHTML = blueprints.reduce(function(total, blueprint){
+        document.getElementById("totalPoints").innerHTML = "Total points: " + blueprints.reduce(function(total, blueprint){
                 return total + blueprint.totalPoints;
         }, 0);
     };
     var drawBlueprint = function(bprint){
-        document.getElementById("currentBlueprintName").innerHTML = bprint.name;
+        document.getElementById("currentBlueprintName").innerHTML = "Current Blueprint: " + bprint.name;
         let canvas = document.getElementById("myCanvas");
         let ctx = canvas.getContext("2d");
         ctx.fillRect(0,0,500,500);

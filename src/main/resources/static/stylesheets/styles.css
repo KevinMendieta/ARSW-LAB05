@@ -1,0 +1,59 @@
+body {
+    background:  #2494C1;
+    color: #ffffff;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+h1 {
+    font-size: 60px;
+    width: 95%;
+    margin: auto;
+}
+
+h3 {
+    font-size: 30px;
+    margin: auto;
+}
+
+#getBlueprintsForm {
+    font-size: 30px;
+}
+
+.button {
+    background-color: #9F2B68;
+    border: none;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.label {
+    border: none;
+    padding: 10px 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #9F2B68;
+    color: white;
+}
+
+
